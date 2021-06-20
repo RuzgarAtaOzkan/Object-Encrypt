@@ -1,21 +1,29 @@
 {
   "name": "object-encrypt",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Encrypt your secrets for client side.",
   "main": "index.js",
+  "bin": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "encrypt",
+    "decrypt",
+    "object",
+    "security",
+    "encryption",
+    "decryption"
+  ],
+  "author": "Ruzgar Ata Ozkan",
+  "license": "MIT",
   "dependencies": {
-    "chalk": "^4.1.1",
-    "dotenv": "^10.0.0"
+    "chalk": "^4.1.1"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
-  }
+  "repository": {
+    "type": "http",
+    "url": "https://github.com/RuzgarAtaOzkan/object-encrypt"
+  },
+  "bugs": "https://github.com/RuzgarAtaOzkan/object-encrypt/issues",
+  "homepage": "https://github.com/RuzgarAtaOzkan/object-encrypt#readme"
 }
