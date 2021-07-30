@@ -20,13 +20,15 @@ class ObjectEncrypt {
       .split('');
     const letters = password.split('');
     const complexity = 3;
+    const sectionsLengthComplexity = complexity * 3;
+    const sectionNameComplexity = complexity * 4;
 
     let createdSections = [];
 
-    for (let i = 0; i < complexity * 3; i++) {
+    for (let i = 0; i < sectionsLengthComplexity; i++) {
       let sectionNameEncryption = '';
 
-      for (let j = 0; j < complexity * 4; j++) {
+      for (let j = 0; j < sectionNameComplexity; j++) {
         const randomSectionNameEncryptionIndex = Math.floor(
           Math.random() * sectionNameEncryptionLetters.length
         );
@@ -34,11 +36,11 @@ class ObjectEncrypt {
           sectionNameEncryptionLetters[randomSectionNameEncryptionIndex];
       }
 
-      for (let j = 0; j < complexity; j++) {
+      for (let j = 0; j < sectionNameComplexity; j++) {
         while (sectionNameEncryption === createdSections[j]) {
           sectionNameEncryption = '';
 
-          for (let k = 0; k < complexity * 4; k++) {
+          for (let k = 0; k < sectionNameComplexity; k++) {
             const randomSectionNameEncryptionIndex = Math.floor(
               Math.random() * sectionNameEncryptionLetters.length
             );
@@ -48,7 +50,7 @@ class ObjectEncrypt {
         }
       }
 
-      createdSections = createdSections.concat(sectionNameEncryption);
+      createdSections.push(sectionNameEncryption);
     }
 
     const sections = [...createdSections];
@@ -76,7 +78,9 @@ class ObjectEncrypt {
           ' ! Recommended complexity number is 4 or 3, default complexity number is set to 3'
         )
       );
-      return null;
+      throw new Error(
+        ' ! Recommended complexity number is 4 or 3, default complexity number is set to 3'
+      );
     }
 
     for (let i = 0; i < letters.length; i++) {
@@ -292,5 +296,13 @@ class ObjectEncrypt {
     return `${decryptedPassword}`;
   }
 }
+
+const key = ObjectEncrypt.createKey('123Uitwaaien');
+
+const encrypted = ObjectEncrypt.encrypt('123Uitwaaien', key);
+
+console.log(encrypted);
+
+console.log(ObjectEncrypt.decrypt(encrypted, key));
 
 module.exports = ObjectEncrypt;
