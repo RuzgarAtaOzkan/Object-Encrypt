@@ -297,12 +297,4 @@ class ObjectEncrypt {
   }
 }
 
-const key = ObjectEncrypt.createKey('123Uitwaaien');
-
-const encrypted = ObjectEncrypt.encrypt('123Uitwaaien', key);
-
-console.log(encrypted);
-
-console.log(ObjectEncrypt.decrypt(encrypted, key));
-
 module.exports = ObjectEncrypt;
