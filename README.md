@@ -2,33 +2,23 @@
 
 # 🚀 Quick start
 
-If you're new to Quontral, check the [quickstart guide in the official docs](https://docs.quontral.com/quontral-swap-api/quick-start) on how to get started.
+## 1. Install Object Encrypt
 
-## 1. Install Quontral
-
-The easiest way to integrate the Quontral SDK into your JavaScript project is through the npm module.
+The easiest way to integrate the Object-Encrypt SDK into your JavaScript project is through the npm module.
 
 Install the package via `npm`:
 
 ```shell
-npm install quontral
+npm install object-encrypt
 ```
 
-Adding Quontral to the frontend project is by the following
+Adding Object-Encrypt to the backend project is by the following
 
 ```javascript
-import Quontral from 'quontral';
+import OE from 'object-encrypt';
 ```
 
-## 2. Initialize Quontral
-
-After your dependency is added, you simply need to initialize quontral with class initialization:
-
-> **⚠️ Warning**: Make sure to keep your api key private
-
-```javascript
-const service = new Quontral({ apiKey: 'YOUR_API_KEY' });
-```
+## 2. Initialize Object-Encrypt
 
 ```js
 // OE stands for ObjectEncrypt
