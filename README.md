@@ -12,12 +12,6 @@ Install the package via `npm`:
 npm install object-encrypt
 ```
 
-Adding Object-Encrypt to the backend project is by the following
-
-```javascript
-import OE from 'object-encrypt';
-```
-
 ## 2. Initialize Object-Encrypt
 
 ```js
